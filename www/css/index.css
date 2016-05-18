@@ -3,6 +3,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
+html{font-size:3vw;}
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -24,8 +25,8 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
     width:100%;
+    box-sizing: border-box;
 }
 
 table {margin:auto;}
@@ -36,14 +37,9 @@ table {margin:auto;}
    
 }
 .app {position:absolute; top:50%; left:50%; transform:translateY(-50%) translateX(-50%); -webkit-transform: translateY(-50%) translateX(-50%);}
-.player1{display:inline-block; line-height: 50px; width:50px; min-height: 50px; background: blue; text-align: center; color:white;}
-.player2{display:inline-block; line-height: 50px;width:50px; min-height: 50px; background: red; text-align: center; color:white;}
+h1 {font-size:1rem; text-align:center;}
+h1 .player1{display:inline-block; line-height: 5rem; width:5rem; min-height: 5rem; font-size:2rem; background: blue; text-align: center; color:white;}
+h1 .player2{display:inline-block; line-height: 5rem; width:5rem; min-height: 5rem; font-size:2rem; background: red; text-align: center; color:white;}
+h1 .middle {display:inline-block; text-align:center; line-height: 5rem; width:5rem; min-height: 5rem; font-size:2rem; }
 #game_area {margin-top:10px;}
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
+#game_area td{width:5rem; height: 5rem;}

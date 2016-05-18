@@ -63,7 +63,7 @@ $(function () {
                     var row = $("<tr>");
                     board.append(row);
                     for (var j = 0; j < SIZE; j += 1) {
-                        var cell = $("<td height=50 width=50 align=center valign=center></td>");
+                        var cell = $("<td></td>");
                         cell[0].indicator = indicator;
                         cell.click(set);
                         row.append(cell);
