@@ -5,7 +5,7 @@ $(function () {
             EMPTY = "empty",
             score,
             moves,
-            turn = "player_x",
+            turn = "Czerwony",
             /*
              wartości liczbowe dla pól
              */
@@ -14,11 +14,11 @@ $(function () {
              start gry i czyszczenie zmiennych
              */
             startNewGame = function () {
-                turn = "player_x";
-                score = {"player_x": 0, "player_y": 0};
+                turn = "Czerwony";
+                score = {"Czerwony": 0, "Niebieski": 0};
                 moves = 0;
                 squares.forEach(function (square) {
-                    square.attr('class',EMPTY);
+                    square.attr('class', EMPTY);
                 });
             },
             /*
@@ -41,7 +41,7 @@ $(function () {
                     return;
                 }
                 $(this).attr('class', turn);
-              
+
                 moves += 1;
                 score[turn] += $(this)[0].indicator;
                 if (win(score[turn])) {
@@ -51,7 +51,7 @@ $(function () {
                     alert("Remis!");
                     startNewGame();
                 } else {
-                    turn = turn === "player_x" ? "player_y" : "player_x";
+                    turn = turn === "Czerwony" ? "Niebieski" : "Czerwony";
                 }
             },
             /*
@@ -77,4 +77,6 @@ $(function () {
             };
 
     play();
+    
+    $('body').css('min-height',window.innerHeigth);
 });

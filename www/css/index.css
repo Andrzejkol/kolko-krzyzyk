@@ -28,26 +28,17 @@ body {
     width:100%;
 }
 
-/* Portrait layout (default) */
-.app {
-  
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
-.player_x{background:blue;}
-.player_y{background:red;}
+table {margin:auto;}
+.Niebieski{background:blue;}
+.Czerwony{background:red;}
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
    
 }
-
+.app {position:absolute; top:50%; left:50%; transform:translateY(-50%) translateX(-50%); -webkit-transform: translateY(-50%) translateX(-50%);}
+.player1{display:inline-block; line-height: 50px; width:50px; min-height: 50px; background: blue; text-align: center; color:white;}
+.player2{display:inline-block; line-height: 50px;width:50px; min-height: 50px; background: red; text-align: center; color:white;}
+#game_area {margin-top:10px;}
 h1 {
     font-size:24px;
     font-weight:normal;
@@ -55,23 +46,4 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
-}
-
-
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
 }
