@@ -30,7 +30,10 @@ body {
 }
 
 table {margin:auto;}
-.Niebieski:before{content:"O";  font-size:2rem; text-align: center; position: absolute; top:0px; left:0px; right:0px; bottom:0px;}
+.Niebieski:before{
+    /*
+    content:"O";  font-size:2rem; text-align: center; position: absolute; top:0px; left:0px; right:0px; bottom:0px;
+*/ }
 .Niebieski{background:blue;}
 .Czerwony:before{}
 .Czerwony{background:red;}
