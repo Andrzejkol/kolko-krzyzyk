@@ -7,7 +7,8 @@ $(function () {
             moves,
             turn = "Czerwony",
             /*
-             wartości liczbowe dla pól
+             wartości liczbowe oznazające wygraną
+			 suma wartości pól
              */
             wins = [7, 56, 448, 73, 146, 292, 273, 84],
             /*
@@ -56,6 +57,8 @@ $(function () {
             },
             /*
              utworzenie tabelki do grania
+			 indicator -> wartość liczbowa pola która po kliknięciu 
+			 dodaje sie do zmiennej sumy dla aktualnego gracza
              */
             play = function () {
                 var board = $("<table border=1 cellspacing=0>"), indicator = 1;
@@ -63,12 +66,17 @@ $(function () {
                     var row = $("<tr>");
                     board.append(row);
                     for (var j = 0; j < SIZE; j += 1) {
-                        var cell = $("<td></td>");
+						/* html dla pojedynczego pola*/
+                        var cell = $('<td data-indicator="'+indicator+'"></td>');
                         cell[0].indicator = indicator;
+						/* ustawienie funkcji reagującej na kliknięcie w pole*/
                         cell.click(set);
+						/* dodanie pola do wiersza*/
                         row.append(cell);
+						/*  */
                         squares.push(cell);
                         indicator += indicator;
+						/* indicator zmienia się 2x dla następnego pola*/
                     }
                 }
 
